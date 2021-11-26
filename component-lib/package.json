@@ -1,0 +1,27 @@
+{
+  "name": "component-lib",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Ryan Jerue",
+  "license": "ISC",
+  "devDependencies": {
+    "microbundle": "^0.14.2",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "type": "module",
+  "source": "index.jsx",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle watch --jsx React.createElement"
+  }
+}
